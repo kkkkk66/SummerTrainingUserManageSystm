@@ -1,6 +1,7 @@
 package cn.fighter3.mapper;
 
 import cn.fighter3.entity.User;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,15 @@ class UserMapperTest {
     @DisplayName("删除")
     public void testDelete(){
         userMapper.deleteById(1);
+    }
+
+    @Test
+    @DisplayName("Wrapper查询")
+    public void selectWrapper(){
+        QueryWrapper<User> wrapper = new QueryWrapper();
+        wrapper.eq("login_name", "test1");
+        User uer=userMapper.selectOne(wrapper);
+        System.out.println(uer.toString());
     }
 
 }
