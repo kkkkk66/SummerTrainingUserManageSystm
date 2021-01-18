@@ -14,14 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2021/1/17
  * @Description: TODO
  **/
-@RestController
+@RestController()
 public class LoginController {
     @Autowired
     LoginService loginService;
 
-    @PostMapping(value = "api/login")
-    @CrossOrigin       //后端跨域
+    @PostMapping(value = "/api/login")
     public Result login(@RequestBody LoginDTO loginDTO){
       return loginService.login(loginDTO);
+    }
+
+    @PostMapping(value = "/api/hello")
+    public Result hello(){
+        return new Result(200,"hello","world");
     }
 }
