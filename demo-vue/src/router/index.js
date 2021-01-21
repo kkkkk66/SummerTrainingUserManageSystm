@@ -11,7 +11,10 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      meta: {
+        requireAuth: true
+      }
     },
     //添加登录页面路由
     {
