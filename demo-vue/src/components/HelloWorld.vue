@@ -1,6 +1,6 @@
 <template>
   <div id="demo">
-    {{msg}}
+    {{userName}}
   </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
   data () {
     return {
       msg: 'Hello Vue!'
+    }
+  },
+  computed: {
+    userName() {
+      return this.$store.state.user.userName
     }
   }
 }
