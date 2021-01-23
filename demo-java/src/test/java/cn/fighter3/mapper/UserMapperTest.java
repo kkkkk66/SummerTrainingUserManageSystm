@@ -2,6 +2,8 @@ package cn.fighter3.mapper;
 
 import cn.fighter3.entity.User;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,4 +63,14 @@ class UserMapperTest {
         System.out.println(uer.toString());
     }
 
+    @Test
+    @DisplayName("分页查询")
+    public void testSelectUserPages(){
+        Integer pageNo=0;
+        Integer pageSize=4;
+        Page<User> page=new Page<>(pageNo,pageSize);
+        //IPage<User> userIPage=userMapper.selectUserPage(page,"");
+        IPage<User> userIPage=userMapper.selectUserPage(page,"张三");
+        System.out.println(userIPage.getPages());
+    }
 }
