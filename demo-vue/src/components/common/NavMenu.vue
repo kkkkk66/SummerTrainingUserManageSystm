@@ -1,0 +1,43 @@
+<template>
+    <el-menu
+      :default-active="'/index'"
+      router
+      mode="horizontal"
+      background-color="white"
+      text-color="#222"
+      active-text-color="blue"
+      style="min-width: 1300px">
+      <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
+        {{ item.navItem }}
+      </el-menu-item>
+      <a href="#nowhere" style="color: #222;float: right;padding: 20px;">{{this.$store.state.user.userName}}</a>
+      <i class="el-icon-s-custom" style="float:right;font-size: 30px;color: #0066FF;padding-top: 15px"></i>
+      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold">Just A Demo</span>
+    </el-menu>
+</template>
+
+<script>
+  export default {
+    name: 'NavMenu',
+    data () {
+      return {
+        navList: [
+          {name: '/index', navItem: '首页'},
+          {name: '/', navItem: '用户管理'},
+          {name: '/', navItem: '个人中心'}
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  a{
+    text-decoration: none;
+  }
+
+  span {
+    pointer-events: none;
+  }
+</style>
+
