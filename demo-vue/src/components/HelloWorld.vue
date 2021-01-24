@@ -1,6 +1,6 @@
 <template>
   <div id="demo">
-    {{userName}}
+   你好
   </div>
 </template>
 

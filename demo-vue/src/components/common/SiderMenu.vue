@@ -4,7 +4,7 @@
     class="sider-menu"
     @open="handleOpen"
     @close="handleClose"
-    background-color="white"
+    background-color="#409EFF"
     text-color="black"
     active-text-color="#ffd04b"
   >
@@ -47,9 +47,9 @@ span {
   pointer-events: none;
 }
 .sider-menu {
-  margin-left: 1%;
+  margin-left: -1%;
   margin-top: 1%;
-  width: 10%;
+  width: 12%;
 }
 </style>
 
