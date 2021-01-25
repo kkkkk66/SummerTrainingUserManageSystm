@@ -33,6 +33,14 @@ export default new Router({
           meta:{
             requireAuth:true
           }
+        },
+        {
+          path:'/user',
+          name:'User',
+          component:()=>import('@/views/user/index'),
+          meta:{
+            requireAuth:true
+          }
         }
       ]
     },
