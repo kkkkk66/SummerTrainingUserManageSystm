@@ -26,6 +26,7 @@
             :key="i"
             :index="item.name"
           >
+            <i :class="item.icon"></i>
             {{ item.title }}
           </el-menu-item>
         </el-menu>
@@ -44,8 +45,8 @@ export default {
   data() {
     return {
       navList: [
-        { name: "/index", title: "首页", icon: "" },
-        { name: "/user", title: "用户管理" },
+        { name: "/index", title: "首页", icon: "el-icon-s-home" },
+        { name: "/user", title: "用户管理",icon:"el-icon-s-custom" },
       ],
     };
   },
