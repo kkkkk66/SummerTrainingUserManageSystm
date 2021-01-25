@@ -15,8 +15,7 @@
       <!-- 侧边栏 -->
       <el-aside width="13%">
         <el-menu
-          :default-active="'/index'"
-          class="sider-menu"
+          :default-active="$route.path"
           router
           text-color="black"
           active-text-color="red"
@@ -69,8 +68,5 @@ export default {
   font-weight: bold;
 }
 
-.sider-menu {
-  margin-left: -1%;
-  width: 1%;
-}
+
 </style>
