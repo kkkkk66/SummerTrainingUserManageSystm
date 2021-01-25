@@ -37,7 +37,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/api/user/add")
-    public Result addUser(User user){
+    public Result addUser(@RequestBody User user){
         return new Result(200,"",userService.addUser(user));
     }
 
@@ -47,7 +47,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/api/user/update")
-    public Result updateUser(User user){
+    public Result updateUser(@RequestBody User user){
         return new Result(200,"",userService.updateUser(user));
     }
 
@@ -66,8 +66,8 @@ public class UserController {
      * @param ids
      * @return
      */
-    @PostMapping
-    public Result batchDeleteUser(List<Integer> ids){
+    @PostMapping("/api/user/delete/batch")
+    public Result batchDeleteUser(@RequestBody List<Integer> ids){
         userService.batchDelete(ids);
         return new Result(200,"","");
     }
