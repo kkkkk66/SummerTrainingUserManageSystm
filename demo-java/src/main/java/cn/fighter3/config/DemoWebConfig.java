@@ -32,21 +32,5 @@ public class DemoWebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/api/login");
     }
 
-    /**
-     * 跨域配置
-     * @param registry
-     */
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        //所有请求都允许跨域
-        registry.addMapping("/**")
-                //是否发送Cookie
-                .allowCredentials(true)
-                //放行哪些原始域，这里允许所有原始域名，实际通常会限制原始域名
-                .allowedOrigins("*")
-                .allowedMethods(new String[]{"GET", "POST", "PUT", "DELETE"})
-                .allowedHeaders("*")
-                .exposedHeaders("*");
-    }
 
 }
