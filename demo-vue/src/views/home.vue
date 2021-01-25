@@ -1,29 +1,24 @@
 <template>
   <el-container class="home-container">
     <!--顶部-->
-    <el-header
-      style="margin-right: 15px; background-color: #409eff; width: 100%"
-    >
+    <el-header style="margin-right: 15px; width: 100%">
       <span class="nav-logo">😀</span>
       <span class="head-title">Just A Demo</span>
-      <a href="#nowhere" style="color: #222; float: right; padding: 20px">{{
-        this.$store.state.user.userName
-      }}</a>
-      <i
-        class="el-icon-s-custom"
-        style="float: right; font-size: 30px; color: #303133; padding-top: 15px"
-      ></i>
+      <el-avatar
+        icon="el-icon-user-solid"
+        style="color: #222; float: right; padding: 20px"
+        >{{ this.$store.state.user.userName }}</el-avatar
+      >
     </el-header>
     <!-- 主体 -->
     <el-container>
       <!-- 侧边栏 -->
-      <el-aside width="13%" style="background: #409eff">
+      <el-aside width="13%">
         <el-menu
           :default-active="'/index'"
           class="sider-menu"
           router
           text-color="black"
-          background-color="#409eff"
           active-text-color="red"
         >
           <el-menu-item
@@ -35,6 +30,10 @@
           </el-menu-item>
         </el-menu>
       </el-aside>
+      <el-main>
+        <!--路由占位符-->
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -45,9 +44,8 @@ export default {
   data() {
     return {
       navList: [
-        { name: "/index", title: "首页" },
+        { name: "/index", title: "首页", icon: "" },
         { name: "/user", title: "用户管理" },
-        { name: "/center", title: "个人中心" },
       ],
     };
   },
