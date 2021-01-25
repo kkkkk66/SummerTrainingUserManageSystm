@@ -1,6 +1,6 @@
 package cn.fighter3.service;
 
-import cn.fighter3.dto.UserDTO;
+import cn.fighter3.dto.QueryDTO;
 import cn.fighter3.entity.User;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
@@ -15,10 +15,10 @@ public interface UserService {
 
     /**
      * 分页查询
-     * @param userDTO
+     * @param queryDTO
      * @return
      */
-    IPage<User> selectUserPage(UserDTO userDTO);
+    IPage<User> selectUserPage(QueryDTO queryDTO);
 
     Integer addUser(User user);
 

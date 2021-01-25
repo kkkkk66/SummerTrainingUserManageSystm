@@ -3,12 +3,13 @@ package cn.fighter3.dto;
 /**
  * @Author 三分恶
  * @Date 2021/1/23
- * @Description 用户管理
+ * @Description 查询业务实体
+ * 这里仅仅定义了三个参数，在实际应用中可以定义多个参数
  */
-public class UserDTO {
-    private Integer pageNo;
-    private Integer pageSize;
-    private String keyword;
+public class QueryDTO {
+    private Integer pageNo;    //页码
+    private Integer pageSize;  //页面大小
+    private String keyword;    //关键字
 
     public Integer getPageNo() {
         return pageNo;

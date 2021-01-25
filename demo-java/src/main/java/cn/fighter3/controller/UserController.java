@@ -1,6 +1,6 @@
 package cn.fighter3.controller;
 
-import cn.fighter3.dto.UserDTO;
+import cn.fighter3.dto.QueryDTO;
 import cn.fighter3.entity.User;
 import cn.fighter3.result.Result;
 import cn.fighter3.service.UserService;
@@ -23,12 +23,12 @@ public class UserController {
 
     /**
      * 分页查询
-     * @param userDTO
+     * @param queryDTO
      * @return
      */
     @PostMapping("/api/user/list")
-    public Result userList(@RequestBody UserDTO userDTO){
-        return new Result(200,"",userService.selectUserPage(userDTO));
+    public Result userList(@RequestBody QueryDTO queryDTO){
+        return new Result(200,"",userService.selectUserPage(queryDTO));
     }
 
     /**

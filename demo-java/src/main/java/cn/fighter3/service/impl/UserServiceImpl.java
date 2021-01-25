@@ -1,6 +1,6 @@
 package cn.fighter3.service.impl;
 
-import cn.fighter3.dto.UserDTO;
+import cn.fighter3.dto.QueryDTO;
 import cn.fighter3.entity.User;
 import cn.fighter3.mapper.UserMapper;
 import cn.fighter3.service.UserService;
@@ -22,9 +22,9 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public IPage<User> selectUserPage(UserDTO userDTO) {
-        Page<User> page=new Page<>(userDTO.getPageNo(),userDTO.getPageSize());
-        return userMapper.selectUserPage(page,userDTO.getKeyword());
+    public IPage<User> selectUserPage(QueryDTO queryDTO) {
+        Page<User> page=new Page<>(queryDTO.getPageNo(),queryDTO.getPageSize());
+        return userMapper.selectUserPage(page,queryDTO.getKeyword());
     }
 
     @Override
