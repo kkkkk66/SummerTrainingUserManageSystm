@@ -47,7 +47,7 @@ SpringBoot+Vue前后端分离入门示例，本示例实现了登录功能和用
 
 ## 技术选型
 
-简单说明以下本示例中所用到的技术，如图所示：
+简单说明一下本示例中所用到的技术，如图所示：
 
 ![前后端分离Demo](https://gitee.com/sanfene/picgo/raw/master/20210116123617.png)
 
@@ -154,7 +154,7 @@ git clone https://gitee.com/fighter3/springboot-vue-demo.git
 
 
 
-本示例提供了完整的开发教程，教程地址：
+本示例提供了完整的开发教程，教程地址：[一步步使用SpringBoot结合Vue实现登录和用户管理功能](https://blog.csdn.net/sinat_40770656/article/details/113192115)
 
 ## 参与贡献
 
