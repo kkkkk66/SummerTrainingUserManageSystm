@@ -294,7 +294,7 @@ export default {
           })
           .catch((err) => {
             this.$message.error("删除用户异常");
-            console.loge(err);
+            console.log(err);
           });
       }
     },
@@ -338,7 +338,7 @@ export default {
           })
           .catch((err) => {
             this.$message.error("批量删除用户异常");
-            console.loge(err);
+            console.log(err);
           });
       }
     }
