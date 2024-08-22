@@ -1,7 +1,7 @@
-<template>
-  <body id="login-page">
-    <el-form class="login-container" label-position="left" label-width="0px">
-      <h3 class="login_title">系统登录</h3>
+<template >
+  <body id="login-page" >
+    <el-form  class="login-container" label-position="left" label-width="0px">
+      <h3 class="login_title">系 统 登 录</h3>
       <el-form-item>
         <el-input
           type="text"
@@ -23,11 +23,12 @@
           type="primary"
           style="width: 100%; border: none"
           @click="login"
-          >登录</el-button
+          >登 录</el-button
         >
       </el-form-item>
     </el-form>
   </body>
+
 </template>
 
 <script>
@@ -71,10 +72,14 @@ export default {
 
 <style scoped>
 #login-page {
-  background: url("../assets/img/bg.jpg") no-repeat;
+  background: url("../assets/img/background.png") no-repeat;
   background-position: center;
   height: 100%;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
   background-size: cover;
   position: fixed;
 }

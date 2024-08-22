@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tabel">
     <!--Layout布局-->
     <el-row>
       <el-col :span="24">
@@ -7,7 +7,7 @@
           <el-col :span="6">
             <!--搜索区域-->
             <el-input
-              placeholder="请输入内容"
+              placeholder="请输入查询内容"
               v-model="queryInfo.keyword"
               clearable
               @clear="getUserList"
@@ -74,7 +74,7 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="queryInfo.pageNo"
-        :page-sizes="[1, 2, 5, 10]"
+        
         :page-size="queryInfo.pageSize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
@@ -150,7 +150,7 @@ export default {
       queryInfo: {
         keyword: "", // 查询参数
         pageNo: 1, // 当前页码
-        pageSize: 5, // 每页显示条数
+        pageSize: 8, // 每页显示条数
       },
       addDialogVisible: false, // 控制添加用户对话框是否显示
       userForm: {
@@ -346,7 +346,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .el-row {
   margin-bottom: 20px;
 }
@@ -356,5 +356,8 @@ export default {
 .el-card {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
   height: 60pt;
+}
+.table{
+  height: 10hv;
 }
 </style>

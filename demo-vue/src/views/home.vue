@@ -1,24 +1,22 @@
 <template>
-  <el-container class="home-container">
+  <body class="home-container">
+ 
+  <el-container >
     <!--顶部-->
-    <el-header style="margin-right: 15px; width: 100%">
-      <span class="nav-logo">😀</span>
-      <span class="head-title">Just A Demo</span>
-      <el-avatar
-        icon="el-icon-user-solid"
-        style="color: #222; float: right; padding: 20px"
-        >{{ this.$store.state.user.userName }}</el-avatar
-      >
-    </el-header>
+    <!-- <el-header style="margin-right: 15px; width: 100%">
+    <span class="nav-logo">😀</span> -->
+      <!-- <span class="head-title">Just A Demo</span> -->
+      <!-- <el-avatar>{{ this.$store.state.user.userName }}</el-avatar
+      > -->
+    <!-- </el-header>  -->
     <!-- 主体 -->
-    <el-container>
+    <el-container >
       <!-- 侧边栏 -->
-      <el-aside width="13%">
-        <el-menu
+      <el-aside class="aside">
+        <el-menu 
           :default-active="$route.path"
           router
           text-color="black"
-          active-text-color="red"
         >
           <el-menu-item
             v-for="(item, i) in navList"
@@ -36,6 +34,7 @@
       </el-main>
     </el-container>
   </el-container>
+  </body>
 </template>
 
 <script>
@@ -44,7 +43,7 @@ export default {
   data() {
     return {
       navList: [
-        { name: "/index", title: "首页", icon: "el-icon-s-home" },
+        // { name: "/index", title: "首页", icon: "el-icon-s-home" },
         { name: "/user", title: "用户管理",icon:"el-icon-s-custom" },
       ],
     };
@@ -52,7 +51,7 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .nav-logo {
   position: absolute;
   padding-top: -1%;
@@ -67,6 +66,34 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
-
+.aside {
+        background-color: #D3DCE6;
+        /* color: #333; */
+        text-align: center;
+        /* line-height: 100vh; */
+        top: 0px;
+        height: 100%;
+        /* width: 100%; */
+ }
+.el-menu{
+  background-color: #dde7f2;
+}
+.el-main{
+ 
+  top: 0px;
+  /* height: 100%; */
+ 
+}
+/* .home-container{
+  left: 0px;
+  top: 0px;
+  height: 100%;
+} */
+.el-container{
+  /* left: 0px;
+  top: 0px; */
+  height: 100%;
+  /* position: fixed; */
+}
 
 </style>
