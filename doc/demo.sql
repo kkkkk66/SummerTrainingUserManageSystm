@@ -35,23 +35,23 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'zhangsan', '张三', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (2, 'lisi', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (3, 'lisi1', '李四1', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (5, 'lisi3', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (6, 'lisi4', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (7, 'lisi5', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (8, 'lisi6', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (9, 'lisi7', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (10, 'lisi8', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (11, 'lisi9', '李四', '123', '男', '777@qq.com', '北京市');
-INSERT INTO `user` VALUES (17, 'zhangsan1', '张三1', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (18, 'zhangsan2', '张三2', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (19, 'zhangsan3', '张三3', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (20, 'zhangsan4', '张三4', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (21, 'zhangsan5', '张三5', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (22, 'zhangsan6', '张三6', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (23, 'zhangsan7', '张三7', '123', '男', '888@qq.com', '呼伦贝尔');
-INSERT INTO `user` VALUES (24, 'zhangsan8', '张三8', '123', '男', '888@qq.com', '呼伦贝尔');
+INSERT INTO `user` VALUES (1, 'zhangsan', '张三', '123456', '男', 'zhangsan@qq.com', '北京');
+INSERT INTO `user` VALUES (2, 'lisi', '李四', '123456', '男', 'lisi@qq.com', '天津');
+INSERT INTO `user` VALUES (3, 'songjiang', '宋江', '123456', '男', 'songjiang@qq.com', '河南');
+INSERT INTO `user` VALUES (5, 'lujunyi', '卢俊义', '123456', '男', 'lujunyi@qq.com', '河北');
+INSERT INTO `user` VALUES (6, 'wuyong', '吴用', '123456', '男', 'wuyong@qq.com', '湖北');
+INSERT INTO `user` VALUES (7, 'gongsunsheng', '公孙胜', '123456', '男', 'gongsunsheng@qq.com', '湖南');
+INSERT INTO `user` VALUES (8, 'linchong', '林冲', '123456', '男', 'linchong@qq.com', '山西');
+INSERT INTO `user` VALUES (9, 'huarong', '花荣', '123456', '男', 'huarong@qq.com', '山东');
+INSERT INTO `user` VALUES (10, 'chaijin', '柴进', '123456', '男', 'chaijin@qq.com', '陕西');
+INSERT INTO `user` VALUES (11, 'luzhishen', '鲁智深', '123456', '男', 'luzhishen@qq.com', '上海');
+INSERT INTO `user` VALUES (17, 'wusong', '武松', '123456', '男', 'wusong@qq.com', '四川');
+INSERT INTO `user` VALUES (18, 'lindaiyu', '林黛玉', '123456', '女', 'lindaiyu@qq.com', '广东');
+INSERT INTO `user` VALUES (19, 'jiayuanchun', '贾元春', '123456', '女', 'jiayinchun@qq.com', '浙江');
+INSERT INTO `user` VALUES (20, 'xuebaochai', '薛宝钗', '123456', '女', 'xuebaochai@qq.com', '江苏');
+INSERT INTO `user` VALUES (21, 'shixiangyun', '史湘云', '123456', '女', 'shixiangyun@qq.com', '青海');
+INSERT INTO `user` VALUES (22, 'wangxifeng', '王熙凤', '123456', '女', 'wangxifeng@qq.com', '西藏');
+INSERT INTO `user` VALUES (23, 'xiren', '袭人', '123456', '女', 'xiren@qq.com', '新疆');
+INSERT INTO `user` VALUES (24, 'qingwen', '晴雯', '123456', '女', 'qingwen@qq.com', '甘肃');
 
 SET FOREIGN_KEY_CHECKS = 1;
